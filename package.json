@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "espn-ff": "^0.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
+}
