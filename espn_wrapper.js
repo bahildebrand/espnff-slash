@@ -1,5 +1,8 @@
 const EspnFF = require('espn-ff');
 
+/**
+ * @param  {} results
+ */
 function buildSlackMessage(results){
     var slackObj = {};
     slackObj.attachments = [];
@@ -21,13 +24,17 @@ function buildSlackMessage(results){
 }
 
 class ESPNWrapper {
-    constructor(leagueID, res) {
-        this.res = res;
+    /**
+     * @param  {number} leagueID
+     */
+    constructor(leagueID) {
         this.scraper = new EspnFF({
             leagueId: leagueID
         });
     }
 
+    /**
+     */
     getMatchups() {
         return new Promise( (resolve, reject) => {
             this.scraper.getMatchups(null, (err, matchups) => {
